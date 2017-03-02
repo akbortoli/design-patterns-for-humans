@@ -1,18 +1,18 @@
 ![Design Patterns For Humans][image-1]
 
----- 
+----
 <p align="center">
 🎉 Explicação ultra-simplificada sobre design patterns! 🎉
 </p>
 <p align="center">
-Um tópico que pode facilmente fazer a mente de alguém hesitar. Aqui eu tentarei explicar da maneira mais <em>simples</em> possível para que entre em sua mente (e talvez na minha).
+Um tópico que pode facilmente fazer a mente de alguém balançar. Aqui eu tentarei explicar da maneira mais <em>simples</em> possível para que entre em sua mente (e talvez na minha).
 </p>
----- 
+----
 
 🚀 Introdução
 =================
 
-Design patterns are solutions to recurring problems; **guidelines on how to tackle certain problems**. They are not classes, packages or libraries that you can plug into your application and wait for the magic to happen. These are, rather, guidelines on how to tackle certain problems in certain situations.
+Design patterns são soluções para problemas recorrentes; ** orientações de como resolver certos problemas**. Não são classes, pacotes ou bibliotecas que você pode usar em sua aplicação e esperar que alguma mágica aconteça. E sim, guias de orientações sobre como resolver certos problemas em determinadas situações.
 
 > Design patterns are solutions to recurring problems; guidelines on how to tackle certain problems
 
@@ -21,7 +21,7 @@ Wikipedia describes them as
 > In software engineering, a software design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. It is not a finished design that can be transformed directly into source or machine code. It is a description or template for how to solve a problem that can be used in many different situations.
 
 ⚠️ Be Careful
----- 
+----
 - Design patterns are not a silver bullet to all your problems.
 - Do not try to force them; bad things are supposed to happen, if done so. Keep in mind that design patterns are solutions **to** problems, not solutions **finding** problems; so don't overthink.
 - If used in a correct place in a correct manner, they can prove to be a savior; or else they can result in a horrible mess of a code.
@@ -29,7 +29,7 @@ Wikipedia describes them as
 > Also note that the code samples below are in PHP-7, however this shouldn't stop you because the concepts are same anyways. Plus the **support for other languages is underway**.
 
 Types of Design Patterns
----- 
+----
 
 * [Creational][1]
 * [Structural][2]
@@ -52,7 +52,7 @@ Wikipedia says
  * [Singleton][9]
 
 🏠 Simple Factory
----- 
+----
 Real world example
 > Consider, you are building a house and you need doors. It would be a mess if every time you need a door, you put on your carpenter clothes and start making a door in your house. Instead you get it made from a factory.
 
@@ -116,7 +116,7 @@ echo 'Height: ' . $door->getHeight();
 When creating an object is not just a few assignments and involves some logic, it makes sense to put it in a dedicated factory instead of repeating the same code everywhere.
 
 🏭 Factory Method
----- 
+----
 
 Real world example
 > Consider the case of a hiring manager. It is impossible for one person to interview for each of the positions. Based on the job opening, she has to decide and delegate the interview steps to different people.
@@ -204,7 +204,7 @@ $marketingManager->takeInterview(); // Output: Asking about community building.
 Useful when there is some generic processing in a class but the required sub-class is dynamically decided at runtime. Or putting it in other words, when the client doesn't know what exact sub-class it might need.
 
 🔨 Abstract Factory
----- 
+----
 
 Real world example
 > Extending our door example from Simple Factory. Based on your needs you might get a wooden door from a wooden door shop, iron door from an iron shop or a PVC door from the relevant shop. Plus you might need a guy with different kind of specialities to fit the door, for example a carpenter for wooden door, welder for iron door etc. As you can see there is a dependency between the doors now, wooden door needs carpenter, iron door needs a welder etc.
@@ -322,14 +322,14 @@ $door->getDescription();  // Output: I am an iron door
 $expert->getDescription(); // Output: I can only fit iron doors
 ```
 
-As you can see the wooden door factory has encapsulated the `carpenter` and the `wooden door` also iron door factory has encapsulated the `iron door` and `welder`. And thus it had helped us make sure that for each of the created door, we do not get a wrong fitting expert.  
+As you can see the wooden door factory has encapsulated the `carpenter` and the `wooden door` also iron door factory has encapsulated the `iron door` and `welder`. And thus it had helped us make sure that for each of the created door, we do not get a wrong fitting expert.
 
 **When to use?**
 
 When there are interrelated dependencies with not-that-simple creation logic involved
 
 👷 Builder
----- 
+----
 Real world example
 > Imagine you are at Hardee's and you order a specific deal, lets say, "Big Hardee" and they hand it over to you without *any questions*; this is the example of simple factory. But there are cases when the creation logic might involve more steps. For example you want a customized Subway deal, you have several options in how your burger is made e.g what bread do you want? what types of sauces would you like? What cheese would you want? etc. In such cases builder pattern comes to the rescue.
 
@@ -436,7 +436,7 @@ $burger = (new BurgerBuilder(14))
 When there could be several flavors of an object and to avoid the constructor telescoping. The key difference from the factory pattern is that; factory pattern is to be used when the creation is a one step process while builder pattern is to be used when the creation is a multi step process.
 
 🐑 Prototype
----- 
+----
 Real world example
 > Remember dolly? The sheep that was cloned! Lets not get into the details but the key point here is that it is all about cloning
 
@@ -505,7 +505,7 @@ Also you could use the magic method `__clone` to modify the cloning behavior.
 When an object is required that is similar to existing object or when the creation would be expensive as compared to cloning.
 
 💍 Singleton
----- 
+----
 Real world example
 > There can only be one president of a country at a time. The same president has to be brought to action, whenever duty calls. President here is singleton.
 
@@ -575,7 +575,7 @@ Wikipedia says
  * [Proxy][16]
 
 🔌 Adapter
----- 
+----
 Real world example
 > Consider that you have some pictures in your memory card and you need to transfer them to your computer. In order to transfer them you need some kind of adapter that is compatible with your computer ports so that you can attach memory card to your computer. In this case card reader is an adapter.
 > Another example would be the famous power adapter; a three legged plug can't be connected to a two pronged outlet, it needs to use a power adapter that makes it compatible with the two pronged outlet.
@@ -661,7 +661,7 @@ $hunter->hunt($wildDogAdapter);
 ```
 
 🚡 Bridge
----- 
+----
 Real world example
 > Consider you have a website with different pages and you are supposed to allow the user to change the theme. What would you do? Create multiple copies of each of the pages for each of the themes or would you just create separate theme and load them based on the user's preferences? Bridge pattern allows you to do the second i.e.
 
@@ -756,7 +756,7 @@ echo $careers->getContent(); // "Careers page in Dark Black";
 ```
 
 🌿 Composite
----- 
+----
 
 Real world example
 > Every organization is composed of employees. Each of the employees has same features i.e. has a salary, has some responsibilities, may or may not report to someone, may or may not have some subordinates etc.
@@ -887,7 +887,7 @@ echo "Net salaries: " . $organization->getNetSalaries(); // Net Salaries: 22000
 ```
 
 ☕ Decorator
----- 
+----
 
 Real world example
 
@@ -1007,7 +1007,7 @@ echo $someCoffee->getDescription(); // Simple Coffee, milk, whip, vanilla
 ```
 
 📦 Facade
----- 
+----
 
 Real world example
 > How do you turn on the computer? "Hit the power button" you say! That is what you believe because you are using a simple interface that computer provides on the outside, internally it has to do a lot of stuff to make it happen. This simple interface to the complex subsystem is a facade.
@@ -1096,7 +1096,7 @@ $computer->turnOff(); // Bup bup buzzz! Haah! Zzzzz
 ```
 
 🍃 Flyweight
----- 
+----
 
 Real world example
 > Did you ever have fresh tea from some stall? They often make more than one cup that you demanded and save the rest for any other customer so to save the resources e.g. gas etc. Flyweight pattern is all about that i.e. sharing.
@@ -1177,7 +1177,7 @@ $shop->serve();
 ```
 
 🎱 Proxy
----- 
+----
 Real world example
 > Have you ever used an access card to go through a door? There are multiple options to open that door i.e. it can be opened either using access card or by pressing a button that bypasses the security. The door's main functionality is to open but there is a proxy added on top of it to add some functionality. Let me better explain it using the code example below.
 
@@ -1273,7 +1273,7 @@ Wikipedia says
 * [Template Method][26]
 
 🔗 Chain of Responsibility
----- 
+----
 
 Real world example
 > For example, you have three payment methods (`A`, `B` and `C`) setup in your account; each having a different amount in it. `A` has 100 USD, `B` has 300 USD and `C` having 1000 USD and the preference for payments is chosen as `A` then `B` then `C`. You try to purchase something that is worth 210 USD. Using Chain of Responsibility, first of all account `A` will be checked if it can make the purchase, if yes purchase will be made and the chain will be broken. If not, request will move forward to account `B` checking for amount if yes chain will be broken otherwise the request will keep forwarding till it finds the suitable handler. Here `A`, `B` and `C` are links of the chain and the whole phenomenon is Chain of Responsibility.
@@ -1376,7 +1376,7 @@ $bank->pay(259);
 ```
 
 👮 Command
----- 
+----
 
 Real world example
 > A generic example would be you ordering a food at restaurant. You (i.e. `Client`) ask the waiter (i.e. `Invoker`) to bring some food (i.e. `Command`) and waiter simply forwards the request to Chef (i.e. `Receiver`) who has the knowledge of what and how to cook.
@@ -1492,10 +1492,10 @@ $remote->submit($turnOff); // Darkness!
 Command pattern can also be used to implement a transaction based system. Where you keep maintaining the history of commands as soon as you execute them. If the final command is successfully executed, all good otherwise just iterate through the history and keep executing the `undo` on all the executed commands.
 
 ➿ Iterator
----- 
+----
 
 Real world example
-> An old radio set will be a good example of iterator, where user could start at some channel and then use next or previous buttons to go through the respective channels. Or take an example of MP3 player or a TV set where you could press the next and previous buttons to go through the consecutive channels or in other words they all provide an interface to iterate through the respective channels, songs or radio stations.  
+> An old radio set will be a good example of iterator, where user could start at some channel and then use next or previous buttons to go through the respective channels. Or take an example of MP3 player or a TV set where you could press the next and previous buttons to go through the consecutive channels or in other words they all provide an interface to iterate through the respective channels, songs or radio stations.
 
 In plain words
 > It presents a way to access the elements of an object without exposing the underlying presentation.
@@ -1665,7 +1665,7 @@ $jane->send('Hey!');
 ```
 
 💾 Memento
----- 
+----
 Real world example
 > Take the example of calculator (i.e. originator), where whenever you perform some calculation the last calculation is saved in memory (i.e. memento) so that you can get back to it and maybe get it restored using some action buttons (i.e. caretaker).
 
@@ -1754,9 +1754,9 @@ $editor->getContent(); // This is the first sentence. This is second.
 ```
 
 😎 Observer
----- 
+----
 Real world example
-> A good example would be the job seekers where they subscribe to some job posting site and they are notified whenever there is a matching job opportunity.  
+> A good example would be the job seekers where they subscribe to some job posting site and they are notified whenever there is a matching job opportunity.
 
 In plain words
 > Defines a dependency between objects so that whenever an object changes its state, all its dependents are notified.
@@ -1843,7 +1843,7 @@ $jobPostings->addJob(new JobPost('Software Engineer'));
 ```
 
 🏃 Visitor
----- 
+----
 Real world example
 > Consider someone visiting Dubai. They just need a way (i.e. visa) to enter Dubai. After arrival, they can come and visit any place in Dubai on their own without having to ask for permission or to do some leg work in order to visit any place here; just let them know of a place and they can visit it. Visitor pattern lets you do just that, it helps you add places to visit so that they can visit as much as they can without having to do any legwork.
 
@@ -1942,7 +1942,7 @@ $dolphin = new Dolphin();
 
 $speak = new Speak();
 
-$monkey->accept($speak);    // Ooh oo aa aa!    
+$monkey->accept($speak);    // Ooh oo aa aa!
 $lion->accept($speak);      // Roaaar!
 $dolphin->accept($speak);   // Tuut tutt tuutt!
 ```
@@ -1982,7 +1982,7 @@ $dolphin->accept($jump);   // Walked on water a little and disappeared
 ```
 
 💡 Strategy
----- 
+----
 
 Real world example
 > Consider the example of sorting, we implemented bubble sort but the data started to grow and bubble sort started getting very slow. In order to tackle this we implemented Quick sort. But now although the quick sort algorithm was doing better for large datasets, it was very slow for smaller datasets. In order to handle this we implemented a strategy where for small datasets, bubble sort will be used and for larger, quick sort.
@@ -2055,9 +2055,9 @@ $sorter->sort($dataset); // Output : Sorting using quick sort
 ```
 
 💢 State
----- 
+----
 Real world example
-> Imagine you are using some drawing application, you choose the paint brush to draw. Now the brush changes its behavior based on the selected color i.e. if you have chosen red color it will draw in red, if blue then it will be in blue etc.  
+> Imagine you are using some drawing application, you choose the paint brush to draw. Now the brush changes its behavior based on the selected color i.e. if you have chosen red color it will draw in red, if blue then it will be in blue etc.
 
 In plain words
 > It lets you change the behavior of a class when the state changes.
@@ -2149,7 +2149,7 @@ $editor->type('Fifth line');
 ```
 
 📒 Template Method
----- 
+----
 
 Real world example
 > Suppose we are getting some house built. The steps for building might look like
