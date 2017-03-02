@@ -20,13 +20,13 @@ Wikipedia describes them as
 
 > In software engineering, a software design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. It is not a finished design that can be transformed directly into source or machine code. It is a description or template for how to solve a problem that can be used in many different situations.
 
-⚠️ Be Careful
-----
-- Design patterns are not a silver bullet to all your problems.
-- Do not try to force them; bad things are supposed to happen, if done so. Keep in mind that design patterns are solutions **to** problems, not solutions **finding** problems; so don't overthink.
-- If used in a correct place in a correct manner, they can prove to be a savior; or else they can result in a horrible mess of a code.
+⚠️ Tenha Cuidado
+-----------------
+- Design patterns não são uma bala de prata para todos os seus problemas.
+- Não tente força-los; coisas ruins podem acontecer, se isso for feito. Tenha em mente que design patterns são soluções **para** problemas, não soluções **procurando** problemas; então não pense demais.
+- Se usados no lugar correto da maneira correta, eles podem provar serem uma salvação; Ou então eles podem resultar em uma confusão horrível de código.
 
-> Also note that the code samples below are in PHP-7, however this shouldn't stop you because the concepts are same anyways. Plus the **support for other languages is underway**.
+>  Também note que os códigos de exemplos abaixo estão em PHP-7, de qualquer forma isso não deve impedir você porque os conceitos são os mesmos. Além disso, o **suporte para outras línguas está em andamento**.
 
 Types of Design Patterns
 ----
