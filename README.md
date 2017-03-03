@@ -28,12 +28,12 @@ Wikipedia describes them as
 
 >  Também note que os códigos de exemplos abaixo estão em PHP-7, de qualquer forma isso não deve impedir você porque os conceitos são os mesmos. Além disso, o **suporte para outras línguas está em andamento**.
 
-Types of Design Patterns
+Tipos de Design Patterns
 ----
 
-* [Creational][1]
-* [Structural][2]
-* [Behavioral][3]
+* [Criação][1]
+* [Estrutural][2]
+* [Comportamental][3]
 
 Creational Design Patterns
 ==========================
